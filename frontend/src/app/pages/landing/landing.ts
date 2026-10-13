@@ -56,7 +56,7 @@ import { Logo } from '../../shared/logo';
         >
           <div class="mb-4 flex items-center justify-between">
             <div>
-              <div class="text-xs text-deck-400">RP-2026-01017 · Commercial package</div>
+              <div class="text-xs text-deck-400">Sample submission · Commercial package</div>
               <div class="font-semibold text-white">Old Mill Logistics LLC</div>
             </div>
             <span

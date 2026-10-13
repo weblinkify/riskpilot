@@ -17,7 +17,8 @@
     "test:ci": "ng test --watch=false",
     "start:real": "API_MODE=real ng serve",
     "format": "prettier --write \"src/**/*.{ts,css,html}\" \"e2e/**/*.ts\" \"*.ts\"",
-    "format:check": "prettier --check \"src/**/*.{ts,css,html}\" \"e2e/**/*.ts\" \"*.ts\""
+    "format:check": "prettier --check \"src/**/*.{ts,css,html}\" \"e2e/**/*.ts\" \"*.ts\"",
+    "media": "playwright test -c playwright.media.config.ts && ../scripts/make-gif.sh"
   },
   "private": true,
   "packageManager": "npm@11.19.0",
