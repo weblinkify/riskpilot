@@ -1,0 +1,255 @@
+"""
+RiskPilot GraphQL API.
+Dates/times are ISO-8601 strings (UTC). Money amounts are USD as Float.
+"""
+type Query {
+  "Paginated, filterable submissions inbox."
+  submissions(filter: SubmissionFilter, page: Int = 0, size: Int = 10): SubmissionPage!
+  submission(id: ID!): Submission
+  dashboard: Dashboard!
+  "Most recent audit entries, optionally scoped to one submission."
+  auditLog(submissionId: ID, limit: Int = 50): [AuditEntry!]!
+}
+
+type Mutation {
+  "Runs the configured AssessmentProvider. The result is a recommendation only."
+  runAssessment(submissionId: ID!): Assessment!
+  "Underwriter accepts or overrides the AI recommendation. Always written to the audit log."
+  recordDecision(input: DecisionInput!): Decision!
+}
+
+enum SubmissionStatus {
+  NEW
+  IN_REVIEW
+  QUOTED
+  DECLINED
+  BOUND
+}
+
+enum LineOfBusiness {
+  PROPERTY
+  COMMERCIAL_PACKAGE
+  GENERAL_LIABILITY
+  UMBRELLA
+}
+
+enum ConstructionClass {
+  FRAME
+  JOISTED_MASONRY
+  NON_COMBUSTIBLE
+  MASONRY_NON_COMBUSTIBLE
+  MODIFIED_FIRE_RESISTIVE
+  FIRE_RESISTIVE
+}
+
+enum RecommendedAction {
+  QUOTE
+  REFER
+  REQUEST_INFO
+  DECLINE
+}
+
+enum RiskBand {
+  LOW
+  MODERATE
+  ELEVATED
+  HIGH
+}
+
+enum SignalImpact {
+  INCREASES_RISK
+  DECREASES_RISK
+  INFORMATIONAL
+}
+
+enum DecisionOutcome {
+  "Underwriter followed the AI recommendation."
+  ACCEPTED
+  "Underwriter chose a different action; a reason is mandatory."
+  OVERRIDDEN
+  "Decision made without an AI recommendation (e.g. historical)."
+  MANUAL
+}
+
+input SubmissionFilter {
+  "Matches applicant name, reference, broker name/agency or city (case-insensitive)."
+  search: String
+  statuses: [SubmissionStatus!]
+  lines: [LineOfBusiness!]
+}
+
+type SubmissionPage {
+  items: [Submission!]!
+  total: Int!
+  page: Int!
+  size: Int!
+}
+
+type Submission {
+  id: ID!
+  reference: String!
+  status: SubmissionStatus!
+  lineOfBusiness: LineOfBusiness!
+  premium: Float!
+  receivedAt: String!
+  decidedAt: String
+  applicant: Applicant!
+  broker: Broker!
+  property: PropertyDetails!
+  losses: [Loss!]!
+  documents: [Document!]!
+  latestAssessment: Assessment
+  decisions: [Decision!]!
+}
+
+type Applicant {
+  name: String!
+  industry: String!
+  yearsInBusiness: Int!
+  annualRevenue: Float!
+  street: String!
+  city: String!
+  state: String!
+  zip: String!
+}
+
+type Broker {
+  name: String!
+  agency: String!
+  email: String!
+}
+
+type PropertyDetails {
+  constructionClass: ConstructionClass!
+  occupancy: String!
+  yearBuilt: Int!
+  stories: Int!
+  squareFeet: Int!
+  sprinklered: Boolean!
+  protectionClass: Int!
+  tiv: Float!
+  floodZone: String!
+  distanceToCoastMiles: Float!
+  roofAgeYears: Int
+  openRecommendations: Int
+}
+
+type Loss {
+  id: ID!
+  lossDate: String!
+  cause: String!
+  description: String!
+  amountPaid: Float!
+  amountReserved: Float!
+  status: String!
+}
+
+type ExtractedField {
+  key: String!
+  label: String!
+  value: String!
+}
+
+type Document {
+  id: ID!
+  fileName: String!
+  type: String!
+  sizeBytes: Int!
+  pageCount: Int!
+  uploadedAt: String!
+  extractedFields: [ExtractedField!]!
+}
+
+"Where a signal's evidence comes from: a document and the extracted field."
+type Citation {
+  documentId: ID
+  documentName: String!
+  field: String!
+  value: String!
+}
+
+type RiskSignal {
+  code: String!
+  label: String!
+  impact: SignalImpact!
+  "Points contributed to the risk score (negative lowers risk)."
+  points: Int!
+  explanation: String!
+  citation: Citation!
+}
+
+type AppetiteResult {
+  inAppetite: Boolean!
+  reasons: [String!]!
+  matchedRuleId: ID
+}
+
+type Assessment {
+  id: ID!
+  submissionId: ID!
+  provider: String!
+  model: String
+  riskScore: Int!
+  riskBand: RiskBand!
+  confidence: Float!
+  summary: String!
+  signals: [RiskSignal!]!
+  appetite: AppetiteResult!
+  recommendedAction: RecommendedAction!
+  rationale: String!
+  createdAt: String!
+}
+
+input DecisionInput {
+  submissionId: ID!
+  assessmentId: ID!
+  finalAction: RecommendedAction!
+  "Required when finalAction differs from the recommendation."
+  reason: String
+  underwriter: String!
+}
+
+type Decision {
+  id: ID!
+  submissionId: ID!
+  assessmentId: ID
+  recommendedAction: RecommendedAction
+  finalAction: RecommendedAction!
+  outcome: DecisionOutcome!
+  reason: String
+  underwriter: String!
+  decidedAt: String!
+}
+
+type AuditEntry {
+  id: ID!
+  entityType: String!
+  entityId: String!
+  action: String!
+  actor: String!
+  details: String!
+  createdAt: String!
+}
+
+type StatusCount {
+  status: SubmissionStatus!
+  count: Int!
+}
+
+type LineStat {
+  lineOfBusiness: LineOfBusiness!
+  count: Int!
+  premium: Float!
+}
+
+type Dashboard {
+  totalSubmissions: Int!
+  byStatus: [StatusCount!]!
+  byLine: [LineStat!]!
+  "Average hours from receipt to a quote/decline decision."
+  avgHoursToDecision: Float!
+  "Bound / (Quoted + Bound)."
+  quoteToBindRatio: Float!
+  aiAcceptanceRate: Float
+  decisionsRecorded: Int!
+}

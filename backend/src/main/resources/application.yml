@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: riskpilot
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/riskpilot}
+    username: ${DATABASE_USER:riskpilot}
+    password: ${DATABASE_PASSWORD:riskpilot}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  graphql:
+    graphiql:
+      enabled: true
+    cors:
+      allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:4200}
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+server:
+  port: ${PORT:8080}
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+riskpilot:
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:4200}
+  assessment:
+    provider: ${ASSESSMENT_PROVIDER:mock}
+  anthropic:
+    api-key: ${ANTHROPIC_API_KEY:}
+    model: ${ANTHROPIC_MODEL:claude-opus-5-5}
