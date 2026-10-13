@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci --no-audit --no-fund",
+  "buildCommand": "API_MODE=mock npm run build",
+  "outputDirectory": "dist/frontend/browser",
+  "rewrites": [{ "source": "/((?!.*\\.).*)", "destination": "/index.html" }],
+  "headers": [
+    { "source": "/env.js", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
+  ]
+}
