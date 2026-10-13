@@ -1,0 +1,4078 @@
+{
+  "SUB-1001" : {
+    "riskScore" : 86,
+    "riskBand" : "HIGH",
+    "confidence" : 0.92,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Risk score 86 is at or above the decline threshold (75).",
+    "summary" : "Harborview Kitchen & Bar: full-service restaurant in Sacramento, CA. Frame (ISO 1), built 2000, TIV $36,120,000. Risk score 86 (high), driven mainly by construction class and 4 losses in 5 years.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"GL – general appetite\": TIV $36,120,000 is within the $50,000,000 limit." ],
+      "matchedRuleId" : "4"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 18,
+      "explanation" : "Frame (ISO 1) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1001-D2",
+        "documentName" : "acord140_harborview.pdf",
+        "field" : "construction_class",
+        "value" : "Frame (ISO 1)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1001-D2",
+        "documentName" : "acord140_harborview.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 3",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1001-D2",
+        "documentName" : "acord140_harborview.pdf",
+        "field" : "protection_class",
+        "value" : "3"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "4 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 15,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1001-D4",
+        "documentName" : "loss_runs_5yr_harborview.pdf",
+        "field" : "loss_count_5y",
+        "value" : "4"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 26 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1001-D5",
+        "documentName" : "inspection_report_harborview.pdf",
+        "field" : "roof_age_years",
+        "value" : "26"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "2 years in business",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Limited operating history.",
+      "citation" : {
+        "documentId" : "SUB-1001-D1",
+        "documentName" : "acord125_harborview.pdf",
+        "field" : "years_in_business",
+        "value" : "2"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$36,120,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1001-D3",
+        "documentName" : "statement_of_values_harborview.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$36,120,000"
+      }
+    } ]
+  },
+  "SUB-1002" : {
+    "riskScore" : 24,
+    "riskBand" : "LOW",
+    "confidence" : 0.92,
+    "recommendedAction" : "REFER",
+    "rationale" : "TIV is 12% over the rule limit, within referral tolerance (25%). Refer to a senior underwriter for authority.",
+    "summary" : "Copper Ridge Self Storage: self-storage facility in Austin, TX. Fire resistive (ISO 6), built 1990, TIV $27,990,000. Risk score 24 (low), driven mainly by roof age 26 yrs and 1 open claim.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $27,990,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Fire resistive (ISO 6) is fire-resistive.",
+      "citation" : {
+        "documentId" : "SUB-1002-D2",
+        "documentName" : "acord140_copper_ridge.pdf",
+        "field" : "construction_class",
+        "value" : "Fire resistive (ISO 6)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1002-D2",
+        "documentName" : "acord140_copper_ridge.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 2",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1002-D2",
+        "documentName" : "acord140_copper_ridge.pdf",
+        "field" : "protection_class",
+        "value" : "2"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1002-D4",
+        "documentName" : "loss_runs_5yr_copper_ridge.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 26 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1002-D5",
+        "documentName" : "inspection_report_copper_ridge.pdf",
+        "field" : "roof_age_years",
+        "value" : "26"
+      }
+    } ]
+  },
+  "SUB-1003" : {
+    "riskScore" : 32,
+    "riskBand" : "MODERATE",
+    "confidence" : 0.92,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 32. Proceed to quote at standard terms.",
+    "summary" : "Bluewater Retail Holdings: retail strip center in Chicago, IL. Joisted masonry (ISO 2), built 2020, TIV $6,010,000. Risk score 32 (moderate), driven mainly by construction class and 1 open claim.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $6,010,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1003-D2",
+        "documentName" : "acord140_bluewater.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1003-D2",
+        "documentName" : "acord140_bluewater.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 6",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1003-D2",
+        "documentName" : "acord140_bluewater.pdf",
+        "field" : "protection_class",
+        "value" : "6"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 2020",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Modern construction to current building codes.",
+      "citation" : {
+        "documentId" : "SUB-1003-D2",
+        "documentName" : "acord140_bluewater.pdf",
+        "field" : "year_built",
+        "value" : "2020"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1003-D4",
+        "documentName" : "loss_runs_5yr_bluewater.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 6 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1003-D5",
+        "documentName" : "inspection_report_bluewater.pdf",
+        "field" : "roof_age_years",
+        "value" : "6"
+      }
+    } ]
+  },
+  "SUB-1004" : {
+    "riskScore" : 78,
+    "riskBand" : "HIGH",
+    "confidence" : 0.97,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Outside carrier appetite: TIV $39,420,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\".",
+    "summary" : "Iron Pine Residences LP: garden-style apartments in Savannah, GA. Joisted masonry (ISO 2), built 2005, TIV $39,420,000. Risk score 78 (high), driven mainly by 4 losses in 5 years and construction class.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $39,420,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1004-D2",
+        "documentName" : "acord140_iron_pine.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1004-D2",
+        "documentName" : "acord140_iron_pine.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 2",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1004-D2",
+        "documentName" : "acord140_iron_pine.pdf",
+        "field" : "protection_class",
+        "value" : "2"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "4 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 15,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1004-D4",
+        "documentName" : "loss_runs_5yr_iron_pine.pdf",
+        "field" : "loss_count_5y",
+        "value" : "4"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$264,600 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1004-D4",
+        "documentName" : "loss_runs_5yr_iron_pine.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$264,600"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "2 open claims",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1004-D4",
+        "documentName" : "loss_runs_5yr_iron_pine.pdf",
+        "field" : "open_claims",
+        "value" : "2"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "17.3 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Within 25 miles of the coast: elevated windstorm exposure.",
+      "citation" : {
+        "documentId" : "SUB-1004-D3",
+        "documentName" : "statement_of_values_iron_pine.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "17.3"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone AE",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1004-D3",
+        "documentName" : "statement_of_values_iron_pine.xlsx",
+        "field" : "flood_zone",
+        "value" : "AE"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "2 years in business",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Limited operating history.",
+      "citation" : {
+        "documentId" : "SUB-1004-D1",
+        "documentName" : "acord125_iron_pine.pdf",
+        "field" : "years_in_business",
+        "value" : "2"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$39,420,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1004-D3",
+        "documentName" : "statement_of_values_iron_pine.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$39,420,000"
+      }
+    } ]
+  },
+  "SUB-1005" : {
+    "riskScore" : 65,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.92,
+    "recommendedAction" : "REFER",
+    "rationale" : "Risk score 65 is in the referral band (55–74). Senior review recommended.",
+    "summary" : "Sundial Logistics LLC: dry goods warehouse in San Diego, CA. Non-combustible (ISO 3), built 2003, TIV $14,990,000. Risk score 65 (elevated), driven mainly by 1.2 mi to coast and no sprinkler protection.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"GL – general appetite\": TIV $14,990,000 is within the $50,000,000 limit." ],
+      "matchedRuleId" : "4"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Non-combustible (ISO 3) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1005-D2",
+        "documentName" : "acord140_sundial.pdf",
+        "field" : "construction_class",
+        "value" : "Non-combustible (ISO 3)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1005-D2",
+        "documentName" : "acord140_sundial.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 6",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1005-D2",
+        "documentName" : "acord140_sundial.pdf",
+        "field" : "protection_class",
+        "value" : "6"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1005-D4",
+        "documentName" : "loss_runs_5yr_sundial.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "1.2 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Within 5 miles of the coast: windstorm and surge exposure.",
+      "citation" : {
+        "documentId" : "SUB-1005-D3",
+        "documentName" : "statement_of_values_sundial.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "1.2"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 23 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1005-D5",
+        "documentName" : "inspection_report_sundial.pdf",
+        "field" : "roof_age_years",
+        "value" : "23"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "2 years in business",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Limited operating history.",
+      "citation" : {
+        "documentId" : "SUB-1005-D1",
+        "documentName" : "acord125_sundial.pdf",
+        "field" : "years_in_business",
+        "value" : "2"
+      }
+    } ]
+  },
+  "SUB-1006" : {
+    "riskScore" : 66,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.8,
+    "recommendedAction" : "REFER",
+    "rationale" : "Risk score 66 is in the referral band (55–74). Senior review recommended.",
+    "summary" : "Northstar Press & Print: printing plant in Tacoma, WA. Frame (ISO 1), built 2020, TIV $19,670,000. Risk score 66 (elevated), driven mainly by construction class and 2.4 mi to coast.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Umbrella – excess over our primary\": TIV $19,670,000 is within the $30,000,000 limit." ],
+      "matchedRuleId" : "5"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 18,
+      "explanation" : "Frame (ISO 1) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1006-D2",
+        "documentName" : "acord140_northstar.pdf",
+        "field" : "construction_class",
+        "value" : "Frame (ISO 1)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1006-D2",
+        "documentName" : "acord140_northstar.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 8",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Limited public fire protection (PC 8–10).",
+      "citation" : {
+        "documentId" : "SUB-1006-D2",
+        "documentName" : "acord140_northstar.pdf",
+        "field" : "protection_class",
+        "value" : "8"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 2020",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Modern construction to current building codes.",
+      "citation" : {
+        "documentId" : "SUB-1006-D2",
+        "documentName" : "acord140_northstar.pdf",
+        "field" : "year_built",
+        "value" : "2020"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1006-D4",
+        "documentName" : "loss_runs_5yr_northstar.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "2.4 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Within 5 miles of the coast: windstorm and surge exposure.",
+      "citation" : {
+        "documentId" : "SUB-1006-D3",
+        "documentName" : "statement_of_values_northstar.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "2.4"
+      }
+    }, {
+      "code" : "NO_INSPECTION",
+      "label" : "No inspection report",
+      "impact" : "INFORMATIONAL",
+      "points" : 0,
+      "explanation" : "Roof condition and loss-control status are unverified; consider ordering an inspection.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No INSPECTION_REPORT document"
+      }
+    } ]
+  },
+  "SUB-1007" : {
+    "riskScore" : 22,
+    "riskBand" : "LOW",
+    "confidence" : 0.97,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 22. Proceed to quote at standard terms.",
+    "summary" : "Redwood Hollow Brewing Co.: craft brewery & taproom in Savannah, GA. Masonry non-combustible (ISO 4), built 2011, TIV $10,530,000. Risk score 22 (low), driven mainly by 10.2 mi to coast and iso protection class 5.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Umbrella – excess over our primary\": TIV $10,530,000 is within the $30,000,000 limit." ],
+      "matchedRuleId" : "5"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 2,
+      "explanation" : "Masonry non-combustible (ISO 4) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1007-D2",
+        "documentName" : "acord140_redwood_hollow.pdf",
+        "field" : "construction_class",
+        "value" : "Masonry non-combustible (ISO 4)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1007-D2",
+        "documentName" : "acord140_redwood_hollow.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 5",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1007-D2",
+        "documentName" : "acord140_redwood_hollow.pdf",
+        "field" : "protection_class",
+        "value" : "5"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 2011",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Modern construction to current building codes.",
+      "citation" : {
+        "documentId" : "SUB-1007-D2",
+        "documentName" : "acord140_redwood_hollow.pdf",
+        "field" : "year_built",
+        "value" : "2011"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "10.2 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Within 25 miles of the coast: elevated windstorm exposure.",
+      "citation" : {
+        "documentId" : "SUB-1007-D3",
+        "documentName" : "statement_of_values_redwood_hollow.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "10.2"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 9 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1007-D5",
+        "documentName" : "inspection_report_redwood_hollow.pdf",
+        "field" : "roof_age_years",
+        "value" : "9"
+      }
+    } ]
+  },
+  "SUB-1008" : {
+    "riskScore" : 52,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.77,
+    "recommendedAction" : "REQUEST_INFO",
+    "rationale" : "In appetite, but loss runs are missing. Request 5-year currently valued loss runs before pricing.",
+    "summary" : "Granite Peak Inn & Suites: limited-service hotel in Denver, CO. Non-combustible (ISO 3), built 2002, TIV $12,400,000. Risk score 52 (elevated), driven mainly by no sprinkler protection and iso protection class 9.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"GL – general appetite\": TIV $12,400,000 is within the $50,000,000 limit." ],
+      "matchedRuleId" : "4"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Non-combustible (ISO 3) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1008-D2",
+        "documentName" : "acord140_granite_peak.pdf",
+        "field" : "construction_class",
+        "value" : "Non-combustible (ISO 3)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1008-D2",
+        "documentName" : "acord140_granite_peak.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 9",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Limited public fire protection (PC 8–10).",
+      "citation" : {
+        "documentId" : "SUB-1008-D2",
+        "documentName" : "acord140_granite_peak.pdf",
+        "field" : "protection_class",
+        "value" : "9"
+      }
+    }, {
+      "code" : "LOSS_RUNS_MISSING",
+      "label" : "Loss runs not provided",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Loss experience cannot be verified without currently valued loss runs.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No LOSS_RUNS document"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "41 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1008-D1",
+        "documentName" : "acord125_granite_peak.pdf",
+        "field" : "years_in_business",
+        "value" : "41"
+      }
+    } ]
+  },
+  "SUB-1009" : {
+    "riskScore" : 63,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.97,
+    "recommendedAction" : "REFER",
+    "rationale" : "Risk score 63 is in the referral band (55–74). Senior review recommended.",
+    "summary" : "Silver Creek Auto Works: auto repair garage in San Diego, CA. Joisted masonry (ISO 2), built 1958, TIV $16,430,000. Risk score 63 (elevated), driven mainly by construction class and 0.7 mi to coast.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $16,430,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1009-D2",
+        "documentName" : "acord140_silver_creek.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1009-D2",
+        "documentName" : "acord140_silver_creek.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 4",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1009-D2",
+        "documentName" : "acord140_silver_creek.pdf",
+        "field" : "protection_class",
+        "value" : "4"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1958",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1009-D2",
+        "documentName" : "acord140_silver_creek.pdf",
+        "field" : "year_built",
+        "value" : "1958"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "0.7 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Within 5 miles of the coast: windstorm and surge exposure.",
+      "citation" : {
+        "documentId" : "SUB-1009-D3",
+        "documentName" : "statement_of_values_silver_creek.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "0.7"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "37 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1009-D1",
+        "documentName" : "acord125_silver_creek.pdf",
+        "field" : "years_in_business",
+        "value" : "37"
+      }
+    } ]
+  },
+  "SUB-1010" : {
+    "riskScore" : 56,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.97,
+    "recommendedAction" : "REFER",
+    "rationale" : "Risk score 56 is in the referral band (55–74). Senior review recommended.",
+    "summary" : "Lakeshore Self Storage: self-storage facility in Phoenix, AZ. Joisted masonry (ISO 2), built 1989, TIV $23,770,000. Risk score 56 (elevated), driven mainly by construction class and no sprinkler protection.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Umbrella – excess over our primary\": TIV $23,770,000 is within the $30,000,000 limit." ],
+      "matchedRuleId" : "5"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1010-D2",
+        "documentName" : "acord140_lakeshore.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1010-D2",
+        "documentName" : "acord140_lakeshore.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 7",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1010-D2",
+        "documentName" : "acord140_lakeshore.pdf",
+        "field" : "protection_class",
+        "value" : "7"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1989",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1010-D2",
+        "documentName" : "acord140_lakeshore.pdf",
+        "field" : "year_built",
+        "value" : "1989"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1010-D4",
+        "documentName" : "loss_runs_5yr_lakeshore.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "1 year in business",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Limited operating history.",
+      "citation" : {
+        "documentId" : "SUB-1010-D1",
+        "documentName" : "acord125_lakeshore.pdf",
+        "field" : "years_in_business",
+        "value" : "1"
+      }
+    } ]
+  },
+  "SUB-1011" : {
+    "riskScore" : 95,
+    "riskBand" : "HIGH",
+    "confidence" : 0.92,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Outside carrier appetite: TIV $44,130,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\".",
+    "summary" : "Prairie Wind Retail Holdings: retail strip center in Corpus Christi, TX. Modified fire resistive (ISO 5), built 2001, TIV $44,130,000. Risk score 95 (high), driven mainly by 4 losses in 5 years and 2.9 mi to coast.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $44,130,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Modified fire resistive (ISO 5) is fire-resistive.",
+      "citation" : {
+        "documentId" : "SUB-1011-D2",
+        "documentName" : "acord140_prairie_wind.pdf",
+        "field" : "construction_class",
+        "value" : "Modified fire resistive (ISO 5)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1011-D2",
+        "documentName" : "acord140_prairie_wind.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 1",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1011-D2",
+        "documentName" : "acord140_prairie_wind.pdf",
+        "field" : "protection_class",
+        "value" : "1"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "4 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 15,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1011-D4",
+        "documentName" : "loss_runs_5yr_prairie_wind.pdf",
+        "field" : "loss_count_5y",
+        "value" : "4"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$260,000 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1011-D4",
+        "documentName" : "loss_runs_5yr_prairie_wind.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$260,000"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1011-D4",
+        "documentName" : "loss_runs_5yr_prairie_wind.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "2.9 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Within 5 miles of the coast: windstorm and surge exposure.",
+      "citation" : {
+        "documentId" : "SUB-1011-D3",
+        "documentName" : "statement_of_values_prairie_wind.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "2.9"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone VE",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Coastal high-hazard flood zone.",
+      "citation" : {
+        "documentId" : "SUB-1011-D3",
+        "documentName" : "statement_of_values_prairie_wind.xlsx",
+        "field" : "flood_zone",
+        "value" : "VE"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 6 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1011-D5",
+        "documentName" : "inspection_report_prairie_wind.pdf",
+        "field" : "roof_age_years",
+        "value" : "6"
+      }
+    }, {
+      "code" : "OPEN_RECOMMENDATIONS",
+      "label" : "3 open loss-control recommendations",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Outstanding recommendations from the last inspection.",
+      "citation" : {
+        "documentId" : "SUB-1011-D5",
+        "documentName" : "inspection_report_prairie_wind.pdf",
+        "field" : "open_recommendations",
+        "value" : "3"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "2 years in business",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Limited operating history.",
+      "citation" : {
+        "documentId" : "SUB-1011-D1",
+        "documentName" : "acord125_prairie_wind.pdf",
+        "field" : "years_in_business",
+        "value" : "2"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$44,130,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1011-D3",
+        "documentName" : "statement_of_values_prairie_wind.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$44,130,000"
+      }
+    } ]
+  },
+  "SUB-1012" : {
+    "riskScore" : 31,
+    "riskBand" : "MODERATE",
+    "confidence" : 0.97,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 31. Proceed to quote at standard terms.",
+    "summary" : "Juniper Residences LP: garden-style apartments in Rochester, NY. Joisted masonry (ISO 2), built 2008, TIV $38,130,000. Risk score 31 (moderate), driven mainly by construction class and high single-location tiv.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"GL – general appetite\": TIV $38,130,000 is within the $50,000,000 limit." ],
+      "matchedRuleId" : "4"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1012-D2",
+        "documentName" : "acord140_juniper.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1012-D2",
+        "documentName" : "acord140_juniper.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 1",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1012-D2",
+        "documentName" : "acord140_juniper.pdf",
+        "field" : "protection_class",
+        "value" : "1"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 8 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1012-D5",
+        "documentName" : "inspection_report_juniper.pdf",
+        "field" : "roof_age_years",
+        "value" : "8"
+      }
+    }, {
+      "code" : "OPEN_RECOMMENDATIONS",
+      "label" : "3 open loss-control recommendations",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Outstanding recommendations from the last inspection.",
+      "citation" : {
+        "documentId" : "SUB-1012-D5",
+        "documentName" : "inspection_report_juniper.pdf",
+        "field" : "open_recommendations",
+        "value" : "3"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "39 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1012-D1",
+        "documentName" : "acord125_juniper.pdf",
+        "field" : "years_in_business",
+        "value" : "39"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$38,130,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1012-D3",
+        "documentName" : "statement_of_values_juniper.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$38,130,000"
+      }
+    } ]
+  },
+  "SUB-1013" : {
+    "riskScore" : 60,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.8,
+    "recommendedAction" : "REFER",
+    "rationale" : "TIV is 21% over the rule limit, within referral tolerance (25%). Refer to a senior underwriter for authority.",
+    "summary" : "Old Mill Fabrication Inc.: light metal fabrication in Chicago, IL. Joisted masonry (ISO 2), built 1977, TIV $36,390,000. Risk score 60 (elevated), driven mainly by construction class and 3 losses in 5 years.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $36,390,000 exceeds the $30,000,000 limit of rule \"Umbrella – excess over our primary\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1013-D2",
+        "documentName" : "acord140_old_mill.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1013-D2",
+        "documentName" : "acord140_old_mill.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 3",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1013-D2",
+        "documentName" : "acord140_old_mill.pdf",
+        "field" : "protection_class",
+        "value" : "3"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1977",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1013-D2",
+        "documentName" : "acord140_old_mill.pdf",
+        "field" : "year_built",
+        "value" : "1977"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "3 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1013-D4",
+        "documentName" : "loss_runs_5yr_old_mill.pdf",
+        "field" : "loss_count_5y",
+        "value" : "3"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$364,000 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1013-D4",
+        "documentName" : "loss_runs_5yr_old_mill.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$364,000"
+      }
+    }, {
+      "code" : "NO_INSPECTION",
+      "label" : "No inspection report",
+      "impact" : "INFORMATIONAL",
+      "points" : 0,
+      "explanation" : "Roof condition and loss-control status are unverified; consider ordering an inspection.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No INSPECTION_REPORT document"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "2 years in business",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Limited operating history.",
+      "citation" : {
+        "documentId" : "SUB-1013-D1",
+        "documentName" : "acord125_old_mill.pdf",
+        "field" : "years_in_business",
+        "value" : "2"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$36,390,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1013-D3",
+        "documentName" : "statement_of_values_old_mill.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$36,390,000"
+      }
+    } ]
+  },
+  "SUB-1014" : {
+    "riskScore" : 15,
+    "riskBand" : "LOW",
+    "confidence" : 0.85,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 15. Proceed to quote at standard terms.",
+    "summary" : "Cedar Bend Auto Works: auto repair garage in Atlanta, GA. Fire resistive (ISO 6), built 1952, TIV $24,830,000. Risk score 15 (low), driven mainly by built 1952.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $24,830,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Fire resistive (ISO 6) is fire-resistive.",
+      "citation" : {
+        "documentId" : "SUB-1014-D2",
+        "documentName" : "acord140_cedar_bend.pdf",
+        "field" : "construction_class",
+        "value" : "Fire resistive (ISO 6)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1014-D2",
+        "documentName" : "acord140_cedar_bend.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 1",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1014-D2",
+        "documentName" : "acord140_cedar_bend.pdf",
+        "field" : "protection_class",
+        "value" : "1"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1952",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1014-D2",
+        "documentName" : "acord140_cedar_bend.pdf",
+        "field" : "year_built",
+        "value" : "1952"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1014-D4",
+        "documentName" : "loss_runs_5yr_cedar_bend.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "NO_INSPECTION",
+      "label" : "No inspection report",
+      "impact" : "INFORMATIONAL",
+      "points" : 0,
+      "explanation" : "Roof condition and loss-control status are unverified; consider ordering an inspection.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No INSPECTION_REPORT document"
+      }
+    } ]
+  },
+  "SUB-1015" : {
+    "riskScore" : 67,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.85,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Outside carrier appetite: TIV $36,580,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\".",
+    "summary" : "Riverbend Fabrication Inc.: light metal fabrication in New Orleans, LA. Masonry non-combustible (ISO 4), built 2018, TIV $36,580,000. Risk score 67 (elevated), driven mainly by 4 losses in 5 years and iso protection class 9.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $36,580,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 2,
+      "explanation" : "Masonry non-combustible (ISO 4) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1015-D2",
+        "documentName" : "acord140_riverbend.pdf",
+        "field" : "construction_class",
+        "value" : "Masonry non-combustible (ISO 4)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1015-D2",
+        "documentName" : "acord140_riverbend.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 9",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Limited public fire protection (PC 8–10).",
+      "citation" : {
+        "documentId" : "SUB-1015-D2",
+        "documentName" : "acord140_riverbend.pdf",
+        "field" : "protection_class",
+        "value" : "9"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 2018",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Modern construction to current building codes.",
+      "citation" : {
+        "documentId" : "SUB-1015-D2",
+        "documentName" : "acord140_riverbend.pdf",
+        "field" : "year_built",
+        "value" : "2018"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "4 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 15,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1015-D4",
+        "documentName" : "loss_runs_5yr_riverbend.pdf",
+        "field" : "loss_count_5y",
+        "value" : "4"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$760,900 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1015-D4",
+        "documentName" : "loss_runs_5yr_riverbend.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$760,900"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "2 open claims",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1015-D4",
+        "documentName" : "loss_runs_5yr_riverbend.pdf",
+        "field" : "open_claims",
+        "value" : "2"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "6.6 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Within 25 miles of the coast: elevated windstorm exposure.",
+      "citation" : {
+        "documentId" : "SUB-1015-D3",
+        "documentName" : "statement_of_values_riverbend.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "6.6"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone AE",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1015-D3",
+        "documentName" : "statement_of_values_riverbend.xlsx",
+        "field" : "flood_zone",
+        "value" : "AE"
+      }
+    }, {
+      "code" : "NO_INSPECTION",
+      "label" : "No inspection report",
+      "impact" : "INFORMATIONAL",
+      "points" : 0,
+      "explanation" : "Roof condition and loss-control status are unverified; consider ordering an inspection.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No INSPECTION_REPORT document"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "16 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1015-D1",
+        "documentName" : "acord125_riverbend.pdf",
+        "field" : "years_in_business",
+        "value" : "16"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$36,580,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1015-D3",
+        "documentName" : "statement_of_values_riverbend.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$36,580,000"
+      }
+    } ]
+  },
+  "SUB-1016" : {
+    "riskScore" : 75,
+    "riskBand" : "HIGH",
+    "confidence" : 0.6,
+    "recommendedAction" : "REQUEST_INFO",
+    "rationale" : "In appetite, but loss runs are missing. Request 5-year currently valued loss runs before pricing.",
+    "summary" : "Summit Line Residences LP: garden-style apartments in Tacoma, WA. Frame (ISO 1), built 1979, TIV $23,300,000. Risk score 75 (high), driven mainly by construction class and 3.6 mi to coast.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $23,300,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 18,
+      "explanation" : "Frame (ISO 1) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1016-D2",
+        "documentName" : "acord140_summit_line.pdf",
+        "field" : "construction_class",
+        "value" : "Frame (ISO 1)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1016-D2",
+        "documentName" : "acord140_summit_line.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 2",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1016-D2",
+        "documentName" : "acord140_summit_line.pdf",
+        "field" : "protection_class",
+        "value" : "2"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1979",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1016-D2",
+        "documentName" : "acord140_summit_line.pdf",
+        "field" : "year_built",
+        "value" : "1979"
+      }
+    }, {
+      "code" : "LOSS_RUNS_MISSING",
+      "label" : "Loss runs not provided",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Loss experience cannot be verified without currently valued loss runs.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No LOSS_RUNS document"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "3.6 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Within 5 miles of the coast: windstorm and surge exposure.",
+      "citation" : {
+        "documentId" : "SUB-1016-D3",
+        "documentName" : "statement_of_values_summit_line.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "3.6"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone AE",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1016-D3",
+        "documentName" : "statement_of_values_summit_line.xlsx",
+        "field" : "flood_zone",
+        "value" : "AE"
+      }
+    }, {
+      "code" : "NO_INSPECTION",
+      "label" : "No inspection report",
+      "impact" : "INFORMATIONAL",
+      "points" : 0,
+      "explanation" : "Roof condition and loss-control status are unverified; consider ordering an inspection.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No INSPECTION_REPORT document"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "15 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1016-D1",
+        "documentName" : "acord125_summit_line.pdf",
+        "field" : "years_in_business",
+        "value" : "15"
+      }
+    } ]
+  },
+  "SUB-1017" : {
+    "riskScore" : 59,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.92,
+    "recommendedAction" : "REFER",
+    "rationale" : "Risk score 59 is in the referral band (55–74). Senior review recommended.",
+    "summary" : "Brightwater Fabrication Inc.: light metal fabrication in Houston, TX. Joisted masonry (ISO 2), built 1965, TIV $7,940,000. Risk score 59 (elevated), driven mainly by construction class and no sprinkler protection.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Package – middle market\": TIV $7,940,000 is within the $20,000,000 limit." ],
+      "matchedRuleId" : "3"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1017-D2",
+        "documentName" : "acord140_brightwater.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1017-D2",
+        "documentName" : "acord140_brightwater.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 4",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1017-D2",
+        "documentName" : "acord140_brightwater.pdf",
+        "field" : "protection_class",
+        "value" : "4"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1965",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1017-D2",
+        "documentName" : "acord140_brightwater.pdf",
+        "field" : "year_built",
+        "value" : "1965"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1017-D4",
+        "documentName" : "loss_runs_5yr_brightwater.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone AE",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1017-D3",
+        "documentName" : "statement_of_values_brightwater.xlsx",
+        "field" : "flood_zone",
+        "value" : "AE"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 30 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1017-D5",
+        "documentName" : "inspection_report_brightwater.pdf",
+        "field" : "roof_age_years",
+        "value" : "30"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "39 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1017-D1",
+        "documentName" : "acord125_brightwater.pdf",
+        "field" : "years_in_business",
+        "value" : "39"
+      }
+    } ]
+  },
+  "SUB-1018" : {
+    "riskScore" : 35,
+    "riskBand" : "MODERATE",
+    "confidence" : 0.8,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 35. Proceed to quote at standard terms.",
+    "summary" : "Foxglove Retail Holdings: retail strip center in Denver, CO. Non-combustible (ISO 3), built 1961, TIV $4,250,000. Risk score 35 (moderate), driven mainly by built 1961 and large incurred losses.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Package – middle market\": TIV $4,250,000 is within the $20,000,000 limit." ],
+      "matchedRuleId" : "3"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Non-combustible (ISO 3) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1018-D2",
+        "documentName" : "acord140_foxglove.pdf",
+        "field" : "construction_class",
+        "value" : "Non-combustible (ISO 3)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1018-D2",
+        "documentName" : "acord140_foxglove.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 2",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1018-D2",
+        "documentName" : "acord140_foxglove.pdf",
+        "field" : "protection_class",
+        "value" : "2"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1961",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1018-D2",
+        "documentName" : "acord140_foxglove.pdf",
+        "field" : "year_built",
+        "value" : "1961"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$338,000 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1018-D4",
+        "documentName" : "loss_runs_5yr_foxglove.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$338,000"
+      }
+    }, {
+      "code" : "NO_INSPECTION",
+      "label" : "No inspection report",
+      "impact" : "INFORMATIONAL",
+      "points" : 0,
+      "explanation" : "Roof condition and loss-control status are unverified; consider ordering an inspection.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No INSPECTION_REPORT document"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "36 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1018-D1",
+        "documentName" : "acord125_foxglove.pdf",
+        "field" : "years_in_business",
+        "value" : "36"
+      }
+    } ]
+  },
+  "SUB-1019" : {
+    "riskScore" : 66,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.97,
+    "recommendedAction" : "REFER",
+    "rationale" : "Risk score 66 is in the referral band (55–74). Senior review recommended.",
+    "summary" : "Kestrel Bakehouse Inc.: commercial bakery in Charlotte, NC. Masonry non-combustible (ISO 4), built 1970, TIV $2,500,000. Risk score 66 (elevated), driven mainly by no sprinkler protection and iso protection class 10.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $2,500,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 2,
+      "explanation" : "Masonry non-combustible (ISO 4) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1019-D2",
+        "documentName" : "acord140_kestrel.pdf",
+        "field" : "construction_class",
+        "value" : "Masonry non-combustible (ISO 4)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1019-D2",
+        "documentName" : "acord140_kestrel.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 10",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Limited public fire protection (PC 8–10).",
+      "citation" : {
+        "documentId" : "SUB-1019-D2",
+        "documentName" : "acord140_kestrel.pdf",
+        "field" : "protection_class",
+        "value" : "10"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1970",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1019-D2",
+        "documentName" : "acord140_kestrel.pdf",
+        "field" : "year_built",
+        "value" : "1970"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 30 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1019-D5",
+        "documentName" : "inspection_report_kestrel.pdf",
+        "field" : "roof_age_years",
+        "value" : "30"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "2 years in business",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Limited operating history.",
+      "citation" : {
+        "documentId" : "SUB-1019-D1",
+        "documentName" : "acord125_kestrel.pdf",
+        "field" : "years_in_business",
+        "value" : "2"
+      }
+    } ]
+  },
+  "SUB-1020" : {
+    "riskScore" : 4,
+    "riskBand" : "LOW",
+    "confidence" : 0.92,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 4. Proceed to quote at standard terms.",
+    "summary" : "Maple Court Logistics LLC: dry goods warehouse in Rochester, NY. Masonry non-combustible (ISO 4), built 2003, TIV $2,650,000. Risk score 4 (low), driven mainly by construction class.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"GL – general appetite\": TIV $2,650,000 is within the $50,000,000 limit." ],
+      "matchedRuleId" : "4"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 2,
+      "explanation" : "Masonry non-combustible (ISO 4) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1020-D2",
+        "documentName" : "acord140_maple_court.pdf",
+        "field" : "construction_class",
+        "value" : "Masonry non-combustible (ISO 4)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1020-D2",
+        "documentName" : "acord140_maple_court.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 2",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1020-D2",
+        "documentName" : "acord140_maple_court.pdf",
+        "field" : "protection_class",
+        "value" : "2"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1020-D4",
+        "documentName" : "loss_runs_5yr_maple_court.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 9 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1020-D5",
+        "documentName" : "inspection_report_maple_court.pdf",
+        "field" : "roof_age_years",
+        "value" : "9"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "42 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1020-D1",
+        "documentName" : "acord125_maple_court.pdf",
+        "field" : "years_in_business",
+        "value" : "42"
+      }
+    } ]
+  },
+  "SUB-1021" : {
+    "riskScore" : 30,
+    "riskBand" : "MODERATE",
+    "confidence" : 0.92,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 30. Proceed to quote at standard terms.",
+    "summary" : "Stonegate Inn & Suites: limited-service hotel in Orlando, FL. Non-combustible (ISO 3), built 2016, TIV $12,470,000. Risk score 30 (moderate), driven mainly by 2 losses in 5 years and construction class.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Package – middle market\": TIV $12,470,000 is within the $20,000,000 limit." ],
+      "matchedRuleId" : "3"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Non-combustible (ISO 3) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1021-D2",
+        "documentName" : "acord140_stonegate.pdf",
+        "field" : "construction_class",
+        "value" : "Non-combustible (ISO 3)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1021-D2",
+        "documentName" : "acord140_stonegate.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 6",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1021-D2",
+        "documentName" : "acord140_stonegate.pdf",
+        "field" : "protection_class",
+        "value" : "6"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 2016",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Modern construction to current building codes.",
+      "citation" : {
+        "documentId" : "SUB-1021-D2",
+        "documentName" : "acord140_stonegate.pdf",
+        "field" : "year_built",
+        "value" : "2016"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "2 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1021-D4",
+        "documentName" : "loss_runs_5yr_stonegate.pdf",
+        "field" : "loss_count_5y",
+        "value" : "2"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1021-D4",
+        "documentName" : "loss_runs_5yr_stonegate.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 9 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1021-D5",
+        "documentName" : "inspection_report_stonegate.pdf",
+        "field" : "roof_age_years",
+        "value" : "9"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "43 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1021-D1",
+        "documentName" : "acord125_stonegate.pdf",
+        "field" : "years_in_business",
+        "value" : "43"
+      }
+    } ]
+  },
+  "SUB-1022" : {
+    "riskScore" : 78,
+    "riskBand" : "HIGH",
+    "confidence" : 0.92,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Risk score 78 is at or above the decline threshold (75).",
+    "summary" : "Tidewater Inn & Suites: limited-service hotel in Sacramento, CA. Frame (ISO 1), built 2003, TIV $17,310,000. Risk score 78 (high), driven mainly by construction class and no sprinkler protection.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Package – middle market\": TIV $17,310,000 is within the $20,000,000 limit." ],
+      "matchedRuleId" : "3"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 18,
+      "explanation" : "Frame (ISO 1) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1022-D2",
+        "documentName" : "acord140_tidewater.pdf",
+        "field" : "construction_class",
+        "value" : "Frame (ISO 1)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1022-D2",
+        "documentName" : "acord140_tidewater.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 6",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1022-D2",
+        "documentName" : "acord140_tidewater.pdf",
+        "field" : "protection_class",
+        "value" : "6"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "2 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1022-D4",
+        "documentName" : "loss_runs_5yr_tidewater.pdf",
+        "field" : "loss_count_5y",
+        "value" : "2"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$340,000 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1022-D4",
+        "documentName" : "loss_runs_5yr_tidewater.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$340,000"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1022-D4",
+        "documentName" : "loss_runs_5yr_tidewater.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    } ]
+  },
+  "SUB-1023" : {
+    "riskScore" : 28,
+    "riskBand" : "LOW",
+    "confidence" : 0.92,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 28. Proceed to quote at standard terms.",
+    "summary" : "Wildflower Retail Holdings: retail strip center in Chicago, IL. Masonry non-combustible (ISO 4), built 2004, TIV $13,930,000. Risk score 28 (low), driven mainly by large incurred losses and iso protection class 5.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $13,930,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 2,
+      "explanation" : "Masonry non-combustible (ISO 4) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1023-D2",
+        "documentName" : "acord140_wildflower.pdf",
+        "field" : "construction_class",
+        "value" : "Masonry non-combustible (ISO 4)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1023-D2",
+        "documentName" : "acord140_wildflower.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 5",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1023-D2",
+        "documentName" : "acord140_wildflower.pdf",
+        "field" : "protection_class",
+        "value" : "5"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$582,000 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1023-D4",
+        "documentName" : "loss_runs_5yr_wildflower.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$582,000"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 6 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1023-D5",
+        "documentName" : "inspection_report_wildflower.pdf",
+        "field" : "roof_age_years",
+        "value" : "6"
+      }
+    } ]
+  },
+  "SUB-1024" : {
+    "riskScore" : 51,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.97,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 51. Proceed to quote at standard terms.",
+    "summary" : "Ashford Retail Holdings: retail strip center in Chicago, IL. Joisted masonry (ISO 2), built 1998, TIV $18,860,000. Risk score 51 (elevated), driven mainly by 5 losses in 5 years and construction class.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Package – middle market\": TIV $18,860,000 is within the $20,000,000 limit." ],
+      "matchedRuleId" : "3"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1024-D2",
+        "documentName" : "acord140_ashford.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1024-D2",
+        "documentName" : "acord140_ashford.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 1",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1024-D2",
+        "documentName" : "acord140_ashford.pdf",
+        "field" : "protection_class",
+        "value" : "1"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "5 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 15,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1024-D4",
+        "documentName" : "loss_runs_5yr_ashford.pdf",
+        "field" : "loss_count_5y",
+        "value" : "5"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1024-D4",
+        "documentName" : "loss_runs_5yr_ashford.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 26 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1024-D5",
+        "documentName" : "inspection_report_ashford.pdf",
+        "field" : "roof_age_years",
+        "value" : "26"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "39 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1024-D1",
+        "documentName" : "acord125_ashford.pdf",
+        "field" : "years_in_business",
+        "value" : "39"
+      }
+    } ]
+  },
+  "SUB-1025" : {
+    "riskScore" : 61,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.92,
+    "recommendedAction" : "REFER",
+    "rationale" : "TIV is 11% over the rule limit, within referral tolerance (25%). Refer to a senior underwriter for authority.",
+    "summary" : "Beacon Hill Brewing Co.: craft brewery & taproom in Sacramento, CA. Joisted masonry (ISO 2), built 2002, TIV $22,230,000. Risk score 61 (elevated), driven mainly by 5 losses in 5 years and construction class.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $22,230,000 exceeds the $20,000,000 limit of rule \"Package – middle market\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1025-D2",
+        "documentName" : "acord140_beacon_hill.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1025-D2",
+        "documentName" : "acord140_beacon_hill.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 2",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1025-D2",
+        "documentName" : "acord140_beacon_hill.pdf",
+        "field" : "protection_class",
+        "value" : "2"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "5 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 15,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1025-D4",
+        "documentName" : "loss_runs_5yr_beacon_hill.pdf",
+        "field" : "loss_count_5y",
+        "value" : "5"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$720,500 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1025-D4",
+        "documentName" : "loss_runs_5yr_beacon_hill.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$720,500"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1025-D4",
+        "documentName" : "loss_runs_5yr_beacon_hill.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone A",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1025-D3",
+        "documentName" : "statement_of_values_beacon_hill.xlsx",
+        "field" : "flood_zone",
+        "value" : "A"
+      }
+    } ]
+  },
+  "SUB-1026" : {
+    "riskScore" : 87,
+    "riskBand" : "HIGH",
+    "confidence" : 0.92,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Risk score 87 is at or above the decline threshold (75).",
+    "summary" : "Clearview Self Storage: self-storage facility in Houston, TX. Joisted masonry (ISO 2), built 1985, TIV $3,350,000. Risk score 87 (high), driven mainly by construction class and no sprinkler protection.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $3,350,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1026-D2",
+        "documentName" : "acord140_clearview.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1026-D2",
+        "documentName" : "acord140_clearview.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 7",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1026-D2",
+        "documentName" : "acord140_clearview.pdf",
+        "field" : "protection_class",
+        "value" : "7"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1985",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1026-D2",
+        "documentName" : "acord140_clearview.pdf",
+        "field" : "year_built",
+        "value" : "1985"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "3 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1026-D4",
+        "documentName" : "loss_runs_5yr_clearview.pdf",
+        "field" : "loss_count_5y",
+        "value" : "3"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$546,700 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1026-D4",
+        "documentName" : "loss_runs_5yr_clearview.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$546,700"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1026-D4",
+        "documentName" : "loss_runs_5yr_clearview.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone AE",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1026-D3",
+        "documentName" : "statement_of_values_clearview.xlsx",
+        "field" : "flood_zone",
+        "value" : "AE"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 27 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1026-D5",
+        "documentName" : "inspection_report_clearview.pdf",
+        "field" : "roof_age_years",
+        "value" : "27"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "17 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1026-D1",
+        "documentName" : "acord125_clearview.pdf",
+        "field" : "years_in_business",
+        "value" : "17"
+      }
+    } ]
+  },
+  "SUB-1027" : {
+    "riskScore" : 34,
+    "riskBand" : "MODERATE",
+    "confidence" : 0.92,
+    "recommendedAction" : "REFER",
+    "rationale" : "TIV is 14% over the rule limit, within referral tolerance (25%). Refer to a senior underwriter for authority.",
+    "summary" : "Driftwood Press & Print: printing plant in Denver, CO. Joisted masonry (ISO 2), built 2000, TIV $34,080,000. Risk score 34 (moderate), driven mainly by construction class and high single-location tiv.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $34,080,000 exceeds the $30,000,000 limit of rule \"Umbrella – excess over our primary\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1027-D2",
+        "documentName" : "acord140_driftwood.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1027-D2",
+        "documentName" : "acord140_driftwood.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 7",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1027-D2",
+        "documentName" : "acord140_driftwood.pdf",
+        "field" : "protection_class",
+        "value" : "7"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1027-D4",
+        "documentName" : "loss_runs_5yr_driftwood.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "OPEN_RECOMMENDATIONS",
+      "label" : "3 open loss-control recommendations",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Outstanding recommendations from the last inspection.",
+      "citation" : {
+        "documentId" : "SUB-1027-D5",
+        "documentName" : "inspection_report_driftwood.pdf",
+        "field" : "open_recommendations",
+        "value" : "3"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "20 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1027-D1",
+        "documentName" : "acord125_driftwood.pdf",
+        "field" : "years_in_business",
+        "value" : "20"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$34,080,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1027-D3",
+        "documentName" : "statement_of_values_driftwood.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$34,080,000"
+      }
+    } ]
+  },
+  "SUB-1028" : {
+    "riskScore" : 21,
+    "riskBand" : "LOW",
+    "confidence" : 0.97,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Outside carrier appetite: TIV $61,820,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\".",
+    "summary" : "Elm Street Retail Holdings: retail strip center in Denver, CO. Modified fire resistive (ISO 5), built 2019, TIV $61,820,000. Risk score 21 (low), driven mainly by no sprinkler protection and high single-location tiv.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $61,820,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Modified fire resistive (ISO 5) is fire-resistive.",
+      "citation" : {
+        "documentId" : "SUB-1028-D2",
+        "documentName" : "acord140_elm_street.pdf",
+        "field" : "construction_class",
+        "value" : "Modified fire resistive (ISO 5)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1028-D2",
+        "documentName" : "acord140_elm_street.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 1",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1028-D2",
+        "documentName" : "acord140_elm_street.pdf",
+        "field" : "protection_class",
+        "value" : "1"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 2019",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Modern construction to current building codes.",
+      "citation" : {
+        "documentId" : "SUB-1028-D2",
+        "documentName" : "acord140_elm_street.pdf",
+        "field" : "year_built",
+        "value" : "2019"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1028-D4",
+        "documentName" : "loss_runs_5yr_elm_street.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 7 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1028-D5",
+        "documentName" : "inspection_report_elm_street.pdf",
+        "field" : "roof_age_years",
+        "value" : "7"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "41 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1028-D1",
+        "documentName" : "acord125_elm_street.pdf",
+        "field" : "years_in_business",
+        "value" : "41"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$61,820,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1028-D3",
+        "documentName" : "statement_of_values_elm_street.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$61,820,000"
+      }
+    } ]
+  },
+  "SUB-1029" : {
+    "riskScore" : 51,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.92,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 51. Proceed to quote at standard terms.",
+    "summary" : "Fairhaven Office Partners: class b office building in Tacoma, WA. Masonry non-combustible (ISO 4), built 1993, TIV $1,760,000. Risk score 51 (elevated), driven mainly by 3.6 mi to coast and iso protection class 8.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"GL – general appetite\": TIV $1,760,000 is within the $50,000,000 limit." ],
+      "matchedRuleId" : "4"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 2,
+      "explanation" : "Masonry non-combustible (ISO 4) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1029-D2",
+        "documentName" : "acord140_fairhaven.pdf",
+        "field" : "construction_class",
+        "value" : "Masonry non-combustible (ISO 4)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1029-D2",
+        "documentName" : "acord140_fairhaven.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 8",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Limited public fire protection (PC 8–10).",
+      "citation" : {
+        "documentId" : "SUB-1029-D2",
+        "documentName" : "acord140_fairhaven.pdf",
+        "field" : "protection_class",
+        "value" : "8"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "3.6 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Within 5 miles of the coast: windstorm and surge exposure.",
+      "citation" : {
+        "documentId" : "SUB-1029-D3",
+        "documentName" : "statement_of_values_fairhaven.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "3.6"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone AE",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1029-D3",
+        "documentName" : "statement_of_values_fairhaven.xlsx",
+        "field" : "flood_zone",
+        "value" : "AE"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 24 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1029-D5",
+        "documentName" : "inspection_report_fairhaven.pdf",
+        "field" : "roof_age_years",
+        "value" : "24"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "30 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1029-D1",
+        "documentName" : "acord125_fairhaven.pdf",
+        "field" : "years_in_business",
+        "value" : "30"
+      }
+    } ]
+  },
+  "SUB-1030" : {
+    "riskScore" : 80,
+    "riskBand" : "HIGH",
+    "confidence" : 0.72,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Outside carrier appetite: Joisted masonry (ISO 2) is below the minimum construction class for Property in FL.",
+    "summary" : "Goldleaf Logistics LLC: dry goods warehouse in Orlando, FL. Joisted masonry (ISO 2), built 1956, TIV $26,550,000. Risk score 80 (high), driven mainly by construction class and no sprinkler protection.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "Joisted masonry (ISO 2) is below the minimum construction class for Property in FL." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1030-D2",
+        "documentName" : "acord140_goldleaf.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1030-D2",
+        "documentName" : "acord140_goldleaf.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 10",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Limited public fire protection (PC 8–10).",
+      "citation" : {
+        "documentId" : "SUB-1030-D2",
+        "documentName" : "acord140_goldleaf.pdf",
+        "field" : "protection_class",
+        "value" : "10"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1956",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1030-D2",
+        "documentName" : "acord140_goldleaf.pdf",
+        "field" : "year_built",
+        "value" : "1956"
+      }
+    }, {
+      "code" : "LOSS_RUNS_MISSING",
+      "label" : "Loss runs not provided",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Loss experience cannot be verified without currently valued loss runs.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No LOSS_RUNS document"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 31 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1030-D4",
+        "documentName" : "inspection_report_goldleaf.pdf",
+        "field" : "roof_age_years",
+        "value" : "31"
+      }
+    } ]
+  },
+  "SUB-1031" : {
+    "riskScore" : 56,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.72,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Outside carrier appetite: TIV $32,010,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\".",
+    "summary" : "Highmark Logistics LLC: dry goods warehouse in Rochester, NY. Non-combustible (ISO 3), built 2006, TIV $32,010,000. Risk score 56 (elevated), driven mainly by no sprinkler protection and construction class.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $32,010,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Non-combustible (ISO 3) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1031-D2",
+        "documentName" : "acord140_highmark.pdf",
+        "field" : "construction_class",
+        "value" : "Non-combustible (ISO 3)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1031-D2",
+        "documentName" : "acord140_highmark.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 7",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1031-D2",
+        "documentName" : "acord140_highmark.pdf",
+        "field" : "protection_class",
+        "value" : "7"
+      }
+    }, {
+      "code" : "LOSS_RUNS_MISSING",
+      "label" : "Loss runs not provided",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Loss experience cannot be verified without currently valued loss runs.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No LOSS_RUNS document"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$32,010,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1031-D3",
+        "documentName" : "statement_of_values_highmark.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$32,010,000"
+      }
+    } ]
+  },
+  "SUB-1032" : {
+    "riskScore" : 77,
+    "riskBand" : "HIGH",
+    "confidence" : 0.92,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Risk score 77 is at or above the decline threshold (75).",
+    "summary" : "Ironwood Office Partners: class b office building in Sacramento, CA. Frame (ISO 1), built 1963, TIV $4,270,000. Risk score 77 (high), driven mainly by construction class and no sprinkler protection.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $4,270,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 18,
+      "explanation" : "Frame (ISO 1) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1032-D2",
+        "documentName" : "acord140_ironwood.pdf",
+        "field" : "construction_class",
+        "value" : "Frame (ISO 1)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1032-D2",
+        "documentName" : "acord140_ironwood.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 7",
+      "impact" : "INCREASES_RISK",
+      "points" : 4,
+      "explanation" : "Average public fire protection.",
+      "citation" : {
+        "documentId" : "SUB-1032-D2",
+        "documentName" : "acord140_ironwood.pdf",
+        "field" : "protection_class",
+        "value" : "7"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1963",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1032-D2",
+        "documentName" : "acord140_ironwood.pdf",
+        "field" : "year_built",
+        "value" : "1963"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "3 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1032-D4",
+        "documentName" : "loss_runs_5yr_ironwood.pdf",
+        "field" : "loss_count_5y",
+        "value" : "3"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone A",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1032-D3",
+        "documentName" : "statement_of_values_ironwood.xlsx",
+        "field" : "flood_zone",
+        "value" : "A"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "44 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1032-D1",
+        "documentName" : "acord125_ironwood.pdf",
+        "field" : "years_in_business",
+        "value" : "44"
+      }
+    } ]
+  },
+  "SUB-1033" : {
+    "riskScore" : 31,
+    "riskBand" : "MODERATE",
+    "confidence" : 0.92,
+    "recommendedAction" : "REFER",
+    "rationale" : "TIV is 15% over the rule limit, within referral tolerance (25%). Refer to a senior underwriter for authority.",
+    "summary" : "Larkspur Medical Plaza: medical office building in Houston, TX. Joisted masonry (ISO 2), built 2002, TIV $28,860,000. Risk score 31 (moderate), driven mainly by construction class and iso protection class 9.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $28,860,000 exceeds the $25,000,000 limit of rule \"Core property – Sun Belt\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1033-D2",
+        "documentName" : "acord140_larkspur.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1033-D2",
+        "documentName" : "acord140_larkspur.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 9",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Limited public fire protection (PC 8–10).",
+      "citation" : {
+        "documentId" : "SUB-1033-D2",
+        "documentName" : "acord140_larkspur.pdf",
+        "field" : "protection_class",
+        "value" : "9"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1033-D4",
+        "documentName" : "loss_runs_5yr_larkspur.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 5 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1033-D5",
+        "documentName" : "inspection_report_larkspur.pdf",
+        "field" : "roof_age_years",
+        "value" : "5"
+      }
+    }, {
+      "code" : "OPEN_RECOMMENDATIONS",
+      "label" : "3 open loss-control recommendations",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Outstanding recommendations from the last inspection.",
+      "citation" : {
+        "documentId" : "SUB-1033-D5",
+        "documentName" : "inspection_report_larkspur.pdf",
+        "field" : "open_recommendations",
+        "value" : "3"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "29 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1033-D1",
+        "documentName" : "acord125_larkspur.pdf",
+        "field" : "years_in_business",
+        "value" : "29"
+      }
+    } ]
+  },
+  "SUB-1034" : {
+    "riskScore" : 8,
+    "riskBand" : "LOW",
+    "confidence" : 0.92,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 8. Proceed to quote at standard terms.",
+    "summary" : "Mesa Verde Logistics LLC: dry goods warehouse in Pittsburgh, PA. Non-combustible (ISO 3), built 1993, TIV $20,640,000. Risk score 8 (low), driven mainly by construction class.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $20,640,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Non-combustible (ISO 3) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1034-D2",
+        "documentName" : "acord140_mesa_verde.pdf",
+        "field" : "construction_class",
+        "value" : "Non-combustible (ISO 3)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1034-D2",
+        "documentName" : "acord140_mesa_verde.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 4",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1034-D2",
+        "documentName" : "acord140_mesa_verde.pdf",
+        "field" : "protection_class",
+        "value" : "4"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "0 losses in 5 years",
+      "impact" : "DECREASES_RISK",
+      "points" : -6,
+      "explanation" : "Loss-free for the last five years.",
+      "citation" : {
+        "documentId" : "SUB-1034-D4",
+        "documentName" : "loss_runs_5yr_mesa_verde.pdf",
+        "field" : "loss_count_5y",
+        "value" : "0"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 7 yrs",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Recently replaced roof.",
+      "citation" : {
+        "documentId" : "SUB-1034-D5",
+        "documentName" : "inspection_report_mesa_verde.pdf",
+        "field" : "roof_age_years",
+        "value" : "7"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "39 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1034-D1",
+        "documentName" : "acord125_mesa_verde.pdf",
+        "field" : "years_in_business",
+        "value" : "39"
+      }
+    } ]
+  },
+  "SUB-1035" : {
+    "riskScore" : 56,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.97,
+    "recommendedAction" : "DECLINE",
+    "rationale" : "Outside carrier appetite: TIV $32,010,000 exceeds the $15,000,000 limit of rule \"Property – Florida masonry only\".",
+    "summary" : "Oakline Press & Print: printing plant in Tampa, FL. Modified fire resistive (ISO 5), built 1961, TIV $32,010,000. Risk score 56 (elevated), driven mainly by 2.9 mi to coast and built 1961.",
+    "appetite" : {
+      "inAppetite" : false,
+      "reasons" : [ "TIV $32,010,000 exceeds the $15,000,000 limit of rule \"Property – Florida masonry only\"." ],
+      "matchedRuleId" : null
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Modified fire resistive (ISO 5) is fire-resistive.",
+      "citation" : {
+        "documentId" : "SUB-1035-D2",
+        "documentName" : "acord140_oakline.pdf",
+        "field" : "construction_class",
+        "value" : "Modified fire resistive (ISO 5)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1035-D2",
+        "documentName" : "acord140_oakline.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 4",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1035-D2",
+        "documentName" : "acord140_oakline.pdf",
+        "field" : "protection_class",
+        "value" : "4"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1961",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1035-D2",
+        "documentName" : "acord140_oakline.pdf",
+        "field" : "year_built",
+        "value" : "1961"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1035-D4",
+        "documentName" : "loss_runs_5yr_oakline.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "2.9 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Within 5 miles of the coast: windstorm and surge exposure.",
+      "citation" : {
+        "documentId" : "SUB-1035-D3",
+        "documentName" : "statement_of_values_oakline.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "2.9"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone AE",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1035-D3",
+        "documentName" : "statement_of_values_oakline.xlsx",
+        "field" : "flood_zone",
+        "value" : "AE"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 21 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1035-D5",
+        "documentName" : "inspection_report_oakline.pdf",
+        "field" : "roof_age_years",
+        "value" : "21"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "21 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1035-D1",
+        "documentName" : "acord125_oakline.pdf",
+        "field" : "years_in_business",
+        "value" : "21"
+      }
+    }, {
+      "code" : "TIV_CONCENTRATION",
+      "label" : "High single-location TIV",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "$32,010,000 concentrated at one location.",
+      "citation" : {
+        "documentId" : "SUB-1035-D3",
+        "documentName" : "statement_of_values_oakline.xlsx",
+        "field" : "total_insured_value",
+        "value" : "$32,010,000"
+      }
+    } ]
+  },
+  "SUB-1036" : {
+    "riskScore" : 60,
+    "riskBand" : "ELEVATED",
+    "confidence" : 0.97,
+    "recommendedAction" : "REFER",
+    "rationale" : "Risk score 60 is in the referral band (55–74). Senior review recommended.",
+    "summary" : "Pinecrest Residences LP: garden-style apartments in Tacoma, WA. Modified fire resistive (ISO 5), built 1950, TIV $8,310,000. Risk score 60 (elevated), driven mainly by 5 losses in 5 years and built 1950.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Core property – Sun Belt\": TIV $8,310,000 is within the $25,000,000 limit." ],
+      "matchedRuleId" : "1"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Modified fire resistive (ISO 5) is fire-resistive.",
+      "citation" : {
+        "documentId" : "SUB-1036-D2",
+        "documentName" : "acord140_pinecrest.pdf",
+        "field" : "construction_class",
+        "value" : "Modified fire resistive (ISO 5)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1036-D2",
+        "documentName" : "acord140_pinecrest.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 1",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1036-D2",
+        "documentName" : "acord140_pinecrest.pdf",
+        "field" : "protection_class",
+        "value" : "1"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1950",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1036-D2",
+        "documentName" : "acord140_pinecrest.pdf",
+        "field" : "year_built",
+        "value" : "1950"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "5 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 15,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1036-D4",
+        "documentName" : "loss_runs_5yr_pinecrest.pdf",
+        "field" : "loss_count_5y",
+        "value" : "5"
+      }
+    }, {
+      "code" : "LOSS_SEVERITY",
+      "label" : "Large incurred losses",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "$512,000 incurred over five years.",
+      "citation" : {
+        "documentId" : "SUB-1036-D4",
+        "documentName" : "loss_runs_5yr_pinecrest.pdf",
+        "field" : "total_incurred_5y",
+        "value" : "$512,000"
+      }
+    }, {
+      "code" : "OPEN_CLAIMS",
+      "label" : "1 open claim",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Open reserves may still develop adversely.",
+      "citation" : {
+        "documentId" : "SUB-1036-D4",
+        "documentName" : "loss_runs_5yr_pinecrest.pdf",
+        "field" : "open_claims",
+        "value" : "1"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "5.2 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Within 25 miles of the coast: elevated windstorm exposure.",
+      "citation" : {
+        "documentId" : "SUB-1036-D3",
+        "documentName" : "statement_of_values_pinecrest.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "5.2"
+      }
+    }, {
+      "code" : "ROOF_AGE",
+      "label" : "Roof age 26 yrs",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Roof beyond typical service life; wind/hail vulnerability.",
+      "citation" : {
+        "documentId" : "SUB-1036-D5",
+        "documentName" : "inspection_report_pinecrest.pdf",
+        "field" : "roof_age_years",
+        "value" : "26"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "29 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1036-D1",
+        "documentName" : "acord125_pinecrest.pdf",
+        "field" : "years_in_business",
+        "value" : "29"
+      }
+    } ]
+  },
+  "SUB-1037" : {
+    "riskScore" : 35,
+    "riskBand" : "MODERATE",
+    "confidence" : 0.92,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 35. Proceed to quote at standard terms.",
+    "summary" : "Quarry Road Self Storage: self-storage facility in Chicago, IL. Non-combustible (ISO 3), built 1978, TIV $17,580,000. Risk score 35 (moderate), driven mainly by 2 losses in 5 years and construction class.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Package – middle market\": TIV $17,580,000 is within the $20,000,000 limit." ],
+      "matchedRuleId" : "3"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Non-combustible (ISO 3) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1037-D2",
+        "documentName" : "acord140_quarry_road.pdf",
+        "field" : "construction_class",
+        "value" : "Non-combustible (ISO 3)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1037-D2",
+        "documentName" : "acord140_quarry_road.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 1",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1037-D2",
+        "documentName" : "acord140_quarry_road.pdf",
+        "field" : "protection_class",
+        "value" : "1"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1978",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1037-D2",
+        "documentName" : "acord140_quarry_road.pdf",
+        "field" : "year_built",
+        "value" : "1978"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "2 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1037-D4",
+        "documentName" : "loss_runs_5yr_quarry_road.pdf",
+        "field" : "loss_count_5y",
+        "value" : "2"
+      }
+    }, {
+      "code" : "OPEN_RECOMMENDATIONS",
+      "label" : "4 open loss-control recommendations",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Outstanding recommendations from the last inspection.",
+      "citation" : {
+        "documentId" : "SUB-1037-D5",
+        "documentName" : "inspection_report_quarry_road.pdf",
+        "field" : "open_recommendations",
+        "value" : "4"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "30 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1037-D1",
+        "documentName" : "acord125_quarry_road.pdf",
+        "field" : "years_in_business",
+        "value" : "30"
+      }
+    } ]
+  },
+  "SUB-1038" : {
+    "riskScore" : 71,
+    "riskBand" : "HIGH",
+    "confidence" : 0.8,
+    "recommendedAction" : "REFER",
+    "rationale" : "Risk score 71 is in the referral band (55–74). Senior review recommended.",
+    "summary" : "Rosewood Kitchen & Bar: full-service restaurant in New Orleans, LA. Frame (ISO 1), built 1977, TIV $16,970,000. Risk score 71 (high), driven mainly by construction class and no sprinkler protection.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Package – middle market\": TIV $16,970,000 is within the $20,000,000 limit." ],
+      "matchedRuleId" : "3"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 18,
+      "explanation" : "Frame (ISO 1) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1038-D2",
+        "documentName" : "acord140_rosewood.pdf",
+        "field" : "construction_class",
+        "value" : "Frame (ISO 1)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1038-D2",
+        "documentName" : "acord140_rosewood.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 1",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1038-D2",
+        "documentName" : "acord140_rosewood.pdf",
+        "field" : "protection_class",
+        "value" : "1"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 1977",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Older building; wiring, plumbing and roof systems may predate modern codes.",
+      "citation" : {
+        "documentId" : "SUB-1038-D2",
+        "documentName" : "acord140_rosewood.pdf",
+        "field" : "year_built",
+        "value" : "1977"
+      }
+    }, {
+      "code" : "LOSS_FREQUENCY",
+      "label" : "2 losses in 5 years",
+      "impact" : "INCREASES_RISK",
+      "points" : 8,
+      "explanation" : "Loss frequency above the class average.",
+      "citation" : {
+        "documentId" : "SUB-1038-D4",
+        "documentName" : "loss_runs_5yr_rosewood.pdf",
+        "field" : "loss_count_5y",
+        "value" : "2"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "9.5 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Within 25 miles of the coast: elevated windstorm exposure.",
+      "citation" : {
+        "documentId" : "SUB-1038-D3",
+        "documentName" : "statement_of_values_rosewood.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "9.5"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone A",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1038-D3",
+        "documentName" : "statement_of_values_rosewood.xlsx",
+        "field" : "flood_zone",
+        "value" : "A"
+      }
+    }, {
+      "code" : "NO_INSPECTION",
+      "label" : "No inspection report",
+      "impact" : "INFORMATIONAL",
+      "points" : 0,
+      "explanation" : "Roof condition and loss-control status are unverified; consider ordering an inspection.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No INSPECTION_REPORT document"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "16 years in business",
+      "impact" : "DECREASES_RISK",
+      "points" : -4,
+      "explanation" : "Established operation with long track record.",
+      "citation" : {
+        "documentId" : "SUB-1038-D1",
+        "documentName" : "acord125_rosewood.pdf",
+        "field" : "years_in_business",
+        "value" : "16"
+      }
+    } ]
+  },
+  "SUB-1039" : {
+    "riskScore" : 43,
+    "riskBand" : "MODERATE",
+    "confidence" : 0.6,
+    "recommendedAction" : "REQUEST_INFO",
+    "rationale" : "In appetite, but loss runs are missing. Request 5-year currently valued loss runs before pricing.",
+    "summary" : "Saltmarsh Office Partners: class b office building in Orlando, FL. Masonry non-combustible (ISO 4), built 2017, TIV $14,220,000. Risk score 43 (moderate), driven mainly by no sprinkler protection and 1 year in business.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Umbrella – excess over our primary\": TIV $14,220,000 is within the $30,000,000 limit." ],
+      "matchedRuleId" : "5"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 2,
+      "explanation" : "Masonry non-combustible (ISO 4) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1039-D2",
+        "documentName" : "acord140_saltmarsh.pdf",
+        "field" : "construction_class",
+        "value" : "Masonry non-combustible (ISO 4)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "No sprinkler protection",
+      "impact" : "INCREASES_RISK",
+      "points" : 10,
+      "explanation" : "No automatic sprinkler system reported.",
+      "citation" : {
+        "documentId" : "SUB-1039-D2",
+        "documentName" : "acord140_saltmarsh.pdf",
+        "field" : "sprinklered",
+        "value" : "No"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 3",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1039-D2",
+        "documentName" : "acord140_saltmarsh.pdf",
+        "field" : "protection_class",
+        "value" : "3"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 2017",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Modern construction to current building codes.",
+      "citation" : {
+        "documentId" : "SUB-1039-D2",
+        "documentName" : "acord140_saltmarsh.pdf",
+        "field" : "year_built",
+        "value" : "2017"
+      }
+    }, {
+      "code" : "LOSS_RUNS_MISSING",
+      "label" : "Loss runs not provided",
+      "impact" : "INCREASES_RISK",
+      "points" : 5,
+      "explanation" : "Loss experience cannot be verified without currently valued loss runs.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No LOSS_RUNS document"
+      }
+    }, {
+      "code" : "NO_INSPECTION",
+      "label" : "No inspection report",
+      "impact" : "INFORMATIONAL",
+      "points" : 0,
+      "explanation" : "Roof condition and loss-control status are unverified; consider ordering an inspection.",
+      "citation" : {
+        "documentId" : null,
+        "documentName" : "Submission package",
+        "field" : "documents",
+        "value" : "No INSPECTION_REPORT document"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "1 year in business",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Limited operating history.",
+      "citation" : {
+        "documentId" : "SUB-1039-D1",
+        "documentName" : "acord125_saltmarsh.pdf",
+        "field" : "years_in_business",
+        "value" : "1"
+      }
+    } ]
+  },
+  "SUB-1040" : {
+    "riskScore" : 48,
+    "riskBand" : "MODERATE",
+    "confidence" : 0.92,
+    "recommendedAction" : "QUOTE",
+    "rationale" : "In appetite with risk score 48. Proceed to quote at standard terms.",
+    "summary" : "Thornbury Self Storage: self-storage facility in Corpus Christi, TX. Joisted masonry (ISO 2), built 2015, TIV $1,430,000. Risk score 48 (moderate), driven mainly by construction class and 2.3 mi to coast.",
+    "appetite" : {
+      "inAppetite" : true,
+      "reasons" : [ "Matches rule \"Umbrella – excess over our primary\": TIV $1,430,000 is within the $30,000,000 limit." ],
+      "matchedRuleId" : "5"
+    },
+    "signals" : [ {
+      "code" : "CONSTRUCTION",
+      "label" : "Construction class",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Joisted masonry (ISO 2) is combustible-leaning.",
+      "citation" : {
+        "documentId" : "SUB-1040-D2",
+        "documentName" : "acord140_thornbury.pdf",
+        "field" : "construction_class",
+        "value" : "Joisted masonry (ISO 2)"
+      }
+    }, {
+      "code" : "SPRINKLERS",
+      "label" : "Fully sprinklered",
+      "impact" : "DECREASES_RISK",
+      "points" : -8,
+      "explanation" : "Automatic sprinklers materially reduce fire severity.",
+      "citation" : {
+        "documentId" : "SUB-1040-D2",
+        "documentName" : "acord140_thornbury.pdf",
+        "field" : "sprinklered",
+        "value" : "Yes – 100% wet system"
+      }
+    }, {
+      "code" : "PROTECTION_CLASS",
+      "label" : "ISO protection class 4",
+      "impact" : "DECREASES_RISK",
+      "points" : -2,
+      "explanation" : "Strong public fire protection (PC 1–4).",
+      "citation" : {
+        "documentId" : "SUB-1040-D2",
+        "documentName" : "acord140_thornbury.pdf",
+        "field" : "protection_class",
+        "value" : "4"
+      }
+    }, {
+      "code" : "BUILDING_AGE",
+      "label" : "Built 2015",
+      "impact" : "DECREASES_RISK",
+      "points" : -3,
+      "explanation" : "Modern construction to current building codes.",
+      "citation" : {
+        "documentId" : "SUB-1040-D2",
+        "documentName" : "acord140_thornbury.pdf",
+        "field" : "year_built",
+        "value" : "2015"
+      }
+    }, {
+      "code" : "COASTAL_EXPOSURE",
+      "label" : "2.3 mi to coast",
+      "impact" : "INCREASES_RISK",
+      "points" : 12,
+      "explanation" : "Within 5 miles of the coast: windstorm and surge exposure.",
+      "citation" : {
+        "documentId" : "SUB-1040-D3",
+        "documentName" : "statement_of_values_thornbury.xlsx",
+        "field" : "distance_to_coast_miles",
+        "value" : "2.3"
+      }
+    }, {
+      "code" : "FLOOD_ZONE",
+      "label" : "FEMA flood zone AE",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Special flood hazard area (1% annual chance).",
+      "citation" : {
+        "documentId" : "SUB-1040-D3",
+        "documentName" : "statement_of_values_thornbury.xlsx",
+        "field" : "flood_zone",
+        "value" : "AE"
+      }
+    }, {
+      "code" : "YEARS_IN_BUSINESS",
+      "label" : "1 year in business",
+      "impact" : "INCREASES_RISK",
+      "points" : 6,
+      "explanation" : "Limited operating history.",
+      "citation" : {
+        "documentId" : "SUB-1040-D1",
+        "documentName" : "acord125_thornbury.pdf",
+        "field" : "years_in_business",
+        "value" : "1"
+      }
+    } ]
+  }
+}
