@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+/*
+ * RiskPilot design tokens. Original palette: deep "flight-deck" navy + amber beacon accent.
+ * Data-viz colours follow a validated categorical/status palette (see dashboard).
+ */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-deck-50: #f3f6fa;
+  --color-deck-100: #e4ebf3;
+  --color-deck-200: #c9d6e6;
+  --color-deck-300: #9fb4cf;
+  --color-deck-400: #6d89ae;
+  --color-deck-500: #4a6890;
+  --color-deck-600: #355175;
+  --color-deck-700: #24405f;
+  --color-deck-800: #16304b;
+  --color-deck-900: #0b1f33;
+  --color-deck-950: #061423;
+
+  --color-beacon-300: #fcd27a;
+  --color-beacon-400: #f8bd45;
+  --color-beacon-500: #f5a524;
+  --color-beacon-600: #d9860b;
+
+  /* chart roles */
+  --color-series-1: #2a78d6;
+  --color-good: #0ca30c;
+  --color-warning: #fab219;
+  --color-serious: #ec835a;
+  --color-critical: #d03b3b;
+  --color-good-ink: #006300;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-deck-50 text-deck-900;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-beacon-500;
+  }
+}
+
+@utility card {
+  @apply rounded-xl border border-deck-100 bg-white shadow-[0_1px_2px_rgba(11,31,51,0.04)];
+}
+
+@utility card-title {
+  @apply text-xs font-semibold tracking-wider text-deck-500 uppercase;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility btn-primary {
+  @apply btn bg-deck-900 text-white hover:bg-deck-800;
+}
+
+@utility btn-accent {
+  @apply btn bg-beacon-500 text-deck-950 hover:bg-beacon-400;
+}
+
+@utility btn-ghost {
+  @apply btn border border-deck-200 bg-white text-deck-800 hover:bg-deck-50;
+}
+
+@utility btn-danger {
+  @apply btn border border-red-200 bg-white text-red-700 hover:bg-red-50;
+}
+
+@utility input {
+  @apply w-full rounded-lg border border-deck-200 bg-white px-3 py-2 text-sm text-deck-900 placeholder:text-deck-400 focus:border-deck-500 focus:outline-none;
+}
+
+@utility label {
+  @apply mb-1 block text-xs font-medium text-deck-600;
+}
+
+@utility table-head {
+  @apply px-4 py-2.5 text-left text-xs font-semibold tracking-wide text-deck-500 uppercase;
+}
+
+@utility table-cell {
+  @apply px-4 py-3 text-sm;
+}
