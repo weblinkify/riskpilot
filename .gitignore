@@ -27,3 +27,4 @@ frontend/e2e/.media/
 # Misc
 .vercel
 *.log
+frontend/public/env.js
