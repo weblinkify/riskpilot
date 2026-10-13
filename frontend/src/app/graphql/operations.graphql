@@ -1,0 +1,189 @@
+fragment SubmissionRow on Submission {
+  id
+  reference
+  status
+  lineOfBusiness
+  premium
+  receivedAt
+  applicant {
+    name
+    city
+    state
+  }
+  broker {
+    name
+    agency
+  }
+  property {
+    tiv
+  }
+}
+
+fragment AssessmentFields on Assessment {
+  id
+  submissionId
+  provider
+  model
+  riskScore
+  riskBand
+  confidence
+  summary
+  signals {
+    code
+    label
+    impact
+    points
+    explanation
+    citation {
+      documentId
+      documentName
+      field
+      value
+    }
+  }
+  appetite {
+    inAppetite
+    reasons
+    matchedRuleId
+  }
+  recommendedAction
+  rationale
+  createdAt
+}
+
+fragment DecisionFields on Decision {
+  id
+  submissionId
+  assessmentId
+  recommendedAction
+  finalAction
+  outcome
+  reason
+  underwriter
+  decidedAt
+}
+
+fragment AuditFields on AuditEntry {
+  id
+  entityType
+  entityId
+  action
+  actor
+  details
+  createdAt
+}
+
+query Submissions($filter: SubmissionFilter, $page: Int, $size: Int) {
+  submissions(filter: $filter, page: $page, size: $size) {
+    total
+    page
+    size
+    items {
+      ...SubmissionRow
+    }
+  }
+}
+
+query SubmissionDetail($id: ID!) {
+  submission(id: $id) {
+    ...SubmissionRow
+    decidedAt
+    applicant {
+      name
+      industry
+      yearsInBusiness
+      annualRevenue
+      street
+      city
+      state
+      zip
+    }
+    broker {
+      name
+      agency
+      email
+    }
+    property {
+      constructionClass
+      occupancy
+      yearBuilt
+      stories
+      squareFeet
+      sprinklered
+      protectionClass
+      tiv
+      floodZone
+      distanceToCoastMiles
+      roofAgeYears
+      openRecommendations
+    }
+    losses {
+      id
+      lossDate
+      cause
+      description
+      amountPaid
+      amountReserved
+      status
+    }
+    documents {
+      id
+      fileName
+      type
+      sizeBytes
+      pageCount
+      uploadedAt
+      extractedFields {
+        key
+        label
+        value
+      }
+    }
+    latestAssessment {
+      ...AssessmentFields
+    }
+    decisions {
+      ...DecisionFields
+    }
+  }
+  auditLog(submissionId: $id, limit: 25) {
+    ...AuditFields
+  }
+}
+
+mutation RunAssessment($submissionId: ID!) {
+  runAssessment(submissionId: $submissionId) {
+    ...AssessmentFields
+  }
+}
+
+mutation RecordDecision($input: DecisionInput!) {
+  recordDecision(input: $input) {
+    ...DecisionFields
+  }
+}
+
+query Dashboard {
+  dashboard {
+    totalSubmissions
+    byStatus {
+      status
+      count
+    }
+    byLine {
+      lineOfBusiness
+      count
+      premium
+    }
+    avgHoursToDecision
+    quoteToBindRatio
+    aiAcceptanceRate
+    decisionsRecorded
+  }
+}
+
+query AuditLog($limit: Int) {
+  auditLog(limit: $limit) {
+    ...AuditFields
+  }
+}
