@@ -16,5 +16,10 @@ export default defineConfig({
   },
   webServer: process.env['E2E_BASE_URL']
     ? undefined
-    : { command: 'API_MODE=mock npm start -- --port 4200', url: 'http://localhost:4200', reuseExistingServer: true, timeout: 180_000 },
+    : {
+        command: 'API_MODE=mock npm start -- --port 4200',
+        url: 'http://localhost:4200',
+        reuseExistingServer: true,
+        timeout: 180_000,
+      },
 });

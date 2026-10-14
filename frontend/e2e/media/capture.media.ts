@@ -8,7 +8,10 @@ async function shot(page: Page, name: string, fullPage = false) {
 }
 
 test('screenshots', async ({ browser }) => {
-  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
+  const page = await browser.newPage({
+    viewport: { width: 1440, height: 900 },
+    deviceScaleFactor: 2,
+  });
   await page.goto('/app/dashboard');
   await expect(page.getByTestId('kpi-open')).toBeVisible();
   await shot(page, 'screenshot-dashboard');
@@ -61,7 +64,9 @@ test('demo video', async ({ browser }) => {
   await page.getByTestId('override').scrollIntoViewIfNeeded();
   await page.getByTestId('override').click();
   await pause(700);
-  await page.getByTestId('override-reason').pressSequentially('Broker sent updated loss runs; risk improvements verified.', { delay: 25 });
+  await page
+    .getByTestId('override-reason')
+    .pressSequentially('Broker sent updated loss runs; risk improvements verified.', { delay: 25 });
   await pause(600);
   await page.getByTestId('submit-override').click();
   await expect(page.getByTestId('decision-recorded')).toBeVisible();

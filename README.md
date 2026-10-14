@@ -1,6 +1,6 @@
 # RiskPilot
 
-[![CI](https://github.com/__GH_OWNER__/riskpilot/actions/workflows/ci.yml/badge.svg)](https://github.com/__GH_OWNER__/riskpilot/actions/workflows/ci.yml)
+[![CI](https://github.com/weblinkify/riskpilot/actions/workflows/ci.yml/badge.svg)](https://github.com/weblinkify/riskpilot/actions/workflows/ci.yml)
 [![Live demo](https://img.shields.io/badge/demo-live-f5a524)](https://riskpilot-field-iq1.vercel.app)
 
 **An AI co-pilot for commercial P&C underwriters.** RiskPilot triages broker submissions, scores each risk with
